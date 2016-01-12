@@ -1,0 +1,13 @@
+
+				<input ng-model="vm.movieName" placeholder="Enter Movie Name">
+				<button ng-click="vm.searchMovies()" class="btn btn-defualt">Search</button>
+
+				<div ng-repeat="m in vm.results">
+				
+					<br>
+					<h3>{{m.name}}</h3>
+
+					<div class="well" ng-repeat="link in vm.links">
+						<a target="_blank"ng-href="{{link}}">Link</a>
+					</div>
+				</div>

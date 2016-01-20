@@ -13,7 +13,7 @@ var auth = jwt({
 })
 
 router.use('/', function (req, res, next){
-	console.log('in middle ware line 14')
+	// console.log('in middle ware line 14')
 	next();
 })
 

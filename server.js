@@ -12,9 +12,9 @@ require('./models/PinComment');
 //passport at the bottom of the models
 require('./config/passport');
 //connection
-mongoose.connect('mongodb://localhost/pin_app');
-
-app.set('views', path.join(__dirname, 'views'));
+// mongoose.connect('mongodb://localhost/pin_app');
+mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/movie');
+app.set('views', path.join(__dirname, 'views')); 
 //set the view engine that will render HTML from the server to the client
 app.engine('.html', require('ejs').renderFile);
 //Allow for these directories to be usable on the client side
